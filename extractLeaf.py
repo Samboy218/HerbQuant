@@ -58,7 +58,7 @@ for root, dirs, files in os.walk("samples"):
 				continue
 			x,y,w,h = cv2.boundingRect(contour)
 			roi = imC[y:y+h, x:x+w]
-			cv2.imwrite('images\\' + os.path.splitext(name)[0] + '-{0:03d}.png'.format(curr), roi)
+			cv2.imwrite('images/' + os.path.splitext(name)[0] + '-{0:03d}.png'.format(curr), roi)
 			curr += 1
 		print("found {} contours".format(curr-1))
 
